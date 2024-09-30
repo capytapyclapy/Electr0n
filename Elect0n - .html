@@ -11,13 +11,24 @@
 </head>
 <body>
     <img src="img\fluidsimulator2.png" width="375" height="225" id="startGame" onclick="launchGame()" />
-  <script>
-function launchGame() {
-  const gameWindow = window.open('about:blank', '_blank');
-  gameWindow.document.write('<iframe src="g/fluidsimulator.html" frameborder="0" width="100%" height="100%"></iframe>');
-}
-
-  </script>
+    <script>
+      function launchGame() {
+        const gameWindow = window.open('about:blank', '_blank');
+        gameWindow.document.write('<iframe src="htmlfiles/fluidsimulator.html" frameborder="0" width="100%" height="100%"></iframe>');
+      }
+      
+      function MonkeyMart()  {
+        const gameWindow = window.open('about:blank', '_blank');
+        gameWindow.document.write('<iframe src="htmlfiles/monkeymart.html" frameborder="0" width="100%" height="100%"></iframe>');
+      }
+       
+    function Minecraft()  {
+        const gameWindow = window.open('about:blank', '_blank');
+        gameWindow.document.write('<iframe src=""htmlfiles/Eaglercraft.html"" frameborder="0" width="100%" height="100%"></iframe>');
+      }
+      </script>
+      <img src="img\EaglerCraft.png" width="375" height="225" id="startGame" onclick="Minecraft()" />
+      <img src="img\MonkeyMart.png" width="375" height="225" id="startGame" onclick="MonkeyMart()" />
 
 </body>
 </html>
