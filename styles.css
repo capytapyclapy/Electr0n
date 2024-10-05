@@ -1,8 +1,30 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #000;
     color: #0b001f;
+    background-color: #000;
+    animation: background-effect 5s infinite;
 }
+@keyframes background-effect {
+  0% {
+    background-color: #001d76; /* dark blue */
+  }
+  25% {
+    background-color: #10004a; /* slightly darker blue */
+  }
+  50% {
+    background-color: #000; /* black */
+  }
+  75% {
+    background-color: #10004a; /* slightly darker blue */
+  }
+  100% {
+    background-color: #001d76; /* dark blue */
+  }
+}
+.hidden {
+  display: none;
+}
+
 
 h1 {
     color: #0078d7;
@@ -23,8 +45,45 @@ button {
 
       
 }
+#startgame {
+    position: relative;
+    nav-up: 20px; /* move 20px down from its original position */
+    left: 30px; /* move 30px to the right from its original position */
+  }
 
 button:hover {
     background-color: #007bd3; /* change the background color on hover */
     box-shadow: 35 5 10px #fff; /* add a white glow effect */
 }
+#message {
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    animation: slideIn 2s forwards;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      bottom: -100%; 
+      opacity: 0;
+    }
+    100% {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+  
+  .clicked {
+    animation: slideOut 2s forwards;
+  }
+  
+  @keyframes slideOut {
+    0% {
+      bottom: 0;
+      opacity: 1;
+    }
+    100% {
+      bottom: -100%; /* slide out to the bottom edge of the screen */
+      opacity: 0;
+    }
+  }
